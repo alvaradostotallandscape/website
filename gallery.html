@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery – ALVARADO’S TOTAL LANDSCAPE</title>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('landscape_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+    }
+    header img {
+      max-width: 200px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 40px auto;
+      padding: 40px 20px;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  
+    .gallery img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+    </style>
+<style>
+.gallery img {
+  cursor: pointer;
+}
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+</style>
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+.gallery-item img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+.gallery-item p {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+</style></head>
+<body>
+<header>
+<img alt="Logo" src="logo.png"/>
+<h1>ALVARADO’S TOTAL LANDSCAPE</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+</nav>
+</header>
+<section>
+<h2 style="text-align:center;">Full Project Gallery</h2>
+<div class="gallery"><div class="gallery-item" style="text-align:center;"><img alt="Stone Pathway" src="stone_pathway.jpg"/><p style="margin-top:5px; font-weight:bold;">Stone Pathway</p></div><div class="gallery-item" style="text-align:center;"><img alt="Custom Rock Design" src="custom_rock_design.jpg"/><p style="margin-top:5px; font-weight:bold;">Custom Rock Design</p></div><div class="gallery-item" style="text-align:center;"><img alt="Retaining Wall &amp; Rock Garden" src="retaining_wall.jpg"/><p style="margin-top:5px; font-weight:bold;">Retaining Wall &amp; Rock Garden</p></div><div class="gallery-item" style="text-align:center;"><img alt="Evening Landscape Lighting" src="evening_lighting.jpg"/><p style="margin-top:5px; font-weight:bold;">Evening Landscape Lighting</p></div><div class="gallery-item" style="text-align:center;"><img alt="Stonework Entry with Planters" src="stonework_entry.jpg"/><p style="margin-top:5px; font-weight:bold;">Stonework Entry with Planters</p></div><div class="gallery-item" style="text-align:center;"><img alt="Fresh Turf Lawn" src="fresh_turf_lawn.jpg"/><p style="margin-top:5px; font-weight:bold;">Fresh Turf Lawn</p></div><div class="gallery-item" style="text-align:center;"><img alt="Commercial Median Installation" src="median_installation.jpg"/><p style="margin-top:5px; font-weight:bold;">Commercial Median Installation</p></div><div class="gallery-item" style="text-align:center;"><img alt="Dry Riverbed Design" src="riverbed_design.jpg"/><p style="margin-top:5px; font-weight:bold;">Dry Riverbed Design</p></div><div class="gallery-item" style="text-align:center;"><img alt="Shadow Planters" src="shadow_planters.png"/><p style="margin-top:5px; font-weight:bold;">Shadow Planters</p></div></div>
+</section>
+<div id="lightbox"><img/></div>
+<script>
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightImg = lightbox.querySelector('img');
+    lightImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+document.getElementById('lightbox').addEventListener('click', () => {
+  document.getElementById('lightbox').style.display = 'none';
+});
+</script>
+</body>
+</html>

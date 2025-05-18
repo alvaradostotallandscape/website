@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ALVARADO’S TOTAL LANDSCAPE</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('landscape_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header img {
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      background: rgba(255,255,255,0.9);
+      margin: 30px auto;
+      padding: 60px 20px;
+      max-width: 1100px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(34, 139, 34, 0.2);
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    footer {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #2e7d32;
+      box-shadow: 0 0 8px rgba(76,175,80,0.5);
+    }
+    form input[type="submit"] {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background: #1b5e20;
+    }
+    
+    .gallery img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+    
+    .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 1s, transform 1s; }
+    .visible { opacity: 1; transform: translateY(0); }
+
+    nav a:hover, input[type="submit"]:hover {
+      color: #c8e6c9;
+      background: #388e3c;
+      transition: 0.3s ease-in-out;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #2e7d32;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #backToTop:hover {
+      background: #1b5e20;
+    }
+    
+    header.shrink {
+      padding: 10px 10px;
+      transition: padding 0.3s ease, font-size 0.3s ease;
+    }
+    header.shrink h1 {
+      font-size: 1.5em !important;
+    }
+    header.shrink img {
+      max-width: 160px !important;
+    }
+    </style>
+</head>
+<body>
+<header>
+<img alt="Alvarado’s Total Landscape Logo" src="logo.png"/>
+<h1>ALVARADO’S TOTAL LANDSCAPE</h1>
+<p>Lic# 1129677</p>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#gallery-preview">Gallery</a>
+<a href="#quote">Quote</a>
+</nav>
+</header>
+<section id="home">
+<h2>Welcome</h2>
+<p>We bring your outdoor dreams to life. Whether it's a serene waterfall, lush turf, or elegant hardscape—ALVARADO’S TOTAL LANDSCAPE transforms your space with professional care and artistic vision.</p>
+<p style="font-size: 1.3em; font-weight: bold; color: #2e7d32; text-align: center;">🌿 Your Vision, Our Expertise — Beautiful Yards Start Here!</p>
+</section>
+<section id="services">
+<h2>Our Services</h2>
+<ul>
+<li>Lawn Care &amp; Maintenance</li>
+<li>Garden Design &amp; Installation</li>
+<li>Tree &amp; Shrub Planting</li>
+<li>Irrigation Systems</li>
+<li>Hardscaping (patios, paths, walls)</li>
+</ul>
+</section>
+<section id="about">
+<h2>About Us</h2>
+<p>With over 20 years of landscaping experience, ALVARADO’S TOTAL LANDSCAPE has built a reputation for excellence in design and service. Our dedicated team brings expertise and creativity to every project—ensuring your yard is both functional and breathtaking.</p>
+</section>
+<section class="gallery" id="gallery-preview">
+<h2>Project Gallery</h2><div class="gallery"><img alt="Evening Landscape Lighting" src="evening_lighting.jpg"/><img alt="Stonework Entry with Planters" src="stonework_entry.jpg"/><img alt="Fresh Turf Lawn" src="fresh_turf_lawn.jpg"/><img alt="Commercial Median Installation" src="median_installation.jpg"/><img alt="Dry Riverbed Design" src="riverbed_design.jpg"/></div>
+<p style="width:100%; text-align:center; margin-top:20px;">
+<a href="gallery.html" style="color: #1b5e20;">View Full Gallery »</a>
+</p>
+</section>
+<section id="quote"><h2>Request a Professional Landscaping Quote</h2><p>Please provide the following information so we can better understand your landscaping needs. One of our team members will reach out to you shortly with a personalized consultation.</p><ul><li>Full Name</li><li>Phone Number (e.g., (555) 123-4567)</li><li>Email Address</li><li>Preferred Contact Method</li><li>Project Description</li></ul><form><input placeholder="Full Name" required="True" type="text"/><br/><input placeholder="Phone Number (e.g., (555) 123-4567)" required="True" type="tel"/><br/><input placeholder="Email Address" required="True" type="email"/><br/><input placeholder="Preferred Contact Method (call, text, email)" required="True" type="text"/><br/><textarea placeholder="Describe your project needs and goals..." required="True" rows="5"></textarea><br/><input type="submit" value="Submit Request"/><br/></form>
+<p style="text-align:center; font-size: 1.2em; color: #1b5e20; margin-top: 30px;">
+          📞 Work Cell: <a href="tel:+18056088200" style="color:#1b5e20;">805-608-8200</a><br/>
+          📱 Personal Cell: <a href="tel:+18054063534" style="color:#1b5e20;">805-406-3534</a> <em>(ask for Beto)</em><br/>
+          ✉️ Email: <a href="mailto:info@alvaradostotallandscape.com" style="color:#1b5e20;">info@alvaradostotallandscape.com</a>
+</p>
+</section>
+<footer>
+<p>© 2025 ALVARADO’S TOTAL LANDSCAPE. Lic# 1129677. All rights reserved.</p>
+<p>
+<a href="https://www.instagram.com/28.alberto_a" target="_blank"><i class="fab fa-instagram"></i></a>
+</p>
+<img alt="Instagram QR Code" src="instagram_qr.jpg" style="margin-top: 20px; width: 180px; border-radius: 12px;"/></footer>
+<a href="#" id="backToTop">⬆ Back to Top</a><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.add("fade-in");
+    observer.observe(sec);
+  });
+
+  const topBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+});
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+</script></body>
+</html>
